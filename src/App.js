@@ -1,10 +1,12 @@
-import logo from "./logo.svg";
 import "./App.css";
-
+import { Routes, Route } from "react-router-dom";
+import Home from "./Screens/Home";
 function App() {
   return (
     <>
-      <p className="text-red-500 text-center">sadsa</p>
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+      </Routes>
     </>
   );
 }
