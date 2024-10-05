@@ -6,6 +6,7 @@ import { Typography } from "@mui/material";
 import { Box } from "@mui/material";
 import { AiOutlineCheck } from "react-icons/ai";
 import { easeIn, motion } from "framer-motion";
+import { isMobile } from "react-device-detect";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -59,7 +60,7 @@ export default function VerticalTabs() {
       className="md:flex"
     >
       <Tabs
-        orientation="vertical"
+        orientation={isMobile ? "horizontal" : "vertical"}
         variant="scrollable"
         value={value}
         onChange={handleChange}
